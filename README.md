@@ -15,5 +15,6 @@ Step1: Place a script file at /usr/local/bin
 
 Step2: Add above script to cronjobs to run every minute
 
- # crontab -l
+# crontab -e
+ 
 */1 * * * * /usr/local/bin/killLongRunningSql.pl > /usr/local/bin/killLongRunningSql.log 2>&1
