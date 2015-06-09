@@ -22,7 +22,7 @@ while (@row=$run_query->fetchrow_array()){
                 print "Query to be Executed: $killQuery\n";
                 print "Process Info: @row[0] @row[1] @row[2]  @row[4] @row[5]\n";
 
-                my $killQueryExecute = $dbh -> prepare($killQuery);
+                my $killQueryExecute = $db_connection -> prepare($killQuery);
                 $killQueryExecute-> execute;
         }
 }
